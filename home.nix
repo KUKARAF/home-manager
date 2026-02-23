@@ -45,6 +45,9 @@
     wl-clipboard
     claude-code
     claude-desktop.packages.${system}.claude-desktop-with-fhs
+    bat
+    delta
+    eza
 
     # Build tools
     cmake
