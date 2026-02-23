@@ -6,6 +6,8 @@
 
   home.stateVersion = "25.11";
 
+  nixpkgs.config.allowUnfree = true;
+
   home.packages = with pkgs; [
     # Shell and prompt
     starship
