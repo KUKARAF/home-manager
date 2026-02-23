@@ -40,6 +40,8 @@
     jq
     cheat
     vim
+    wl-clipboard
+    claude-code
 
     # Build tools
     cmake
