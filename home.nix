@@ -10,6 +10,10 @@ let
   posting = uvxTool "posting" "posting";
   vibe = uvxTool "vibe" "--from mistral-vibe vibe";
   vibe-acp = uvxTool "vibe-acp" "--from mistral-vibe vibe-acp";
+  today-cli = uvxTool "today" ''"today[cli] @ git+https://github.com/KUKARAF/today.git"'';
+  week = uvxTool "week" ''--from "today[cli] @ git+https://github.com/KUKARAF/today.git" week'';
+  month = uvxTool "month" ''--from "today[cli] @ git+https://github.com/KUKARAF/today.git" month'';
+  todo = uvxTool "todo" ''"todo @ git+https://github.com/KUKARAF/todo.git"'';
 
   gogcli = pkgs.stdenv.mkDerivation rec {
     pname = "gogcli";
@@ -73,6 +77,10 @@ in
     posting
     vibe
     vibe-acp
+    today-cli
+    week
+    month
+    todo
     gogcli
     bat
     btop
