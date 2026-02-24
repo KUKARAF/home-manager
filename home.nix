@@ -14,6 +14,8 @@ let
   week = uvxTool "week" ''--from "today[cli] @ git+https://github.com/KUKARAF/today.git" week'';
   month = uvxTool "month" ''--from "today[cli] @ git+https://github.com/KUKARAF/today.git" month'';
   todo = uvxTool "todo" ''"todo @ git+https://github.com/KUKARAF/todo.git"'';
+  kv-manager = uvxTool "kv_manager" ''--from "today[cli] @ git+https://github.com/KUKARAF/today.git" kv_manager'';
+  pomodoro = uvxTool "pomodoro" ''"pomodoro @ git+https://github.com/KUKARAF/pomodoro.git"'';
 
   gogcli = pkgs.stdenv.mkDerivation rec {
     pname = "gogcli";
@@ -81,6 +83,8 @@ in
     week
     month
     todo
+    kv-manager
+    pomodoro
     gogcli
     bat
     btop
