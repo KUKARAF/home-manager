@@ -1,0 +1,8 @@
+# vulnix whitelist — add false positives here
+# See: https://github.com/nix-community/vulnix#whitelisting
+#
+# Example:
+# [[rules]]
+# name = "somepkg"
+# cve = ["CVE-2021-XXXXX"]
+# comment = "not affected, uses different codepath"
