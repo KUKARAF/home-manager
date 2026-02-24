@@ -6,7 +6,7 @@ let
   '';
 
   aider = uvxTool "aider" "aider-chat";
-  runprompt = uvxTool "runprompt" "runprompt";
+  runprompt = uvxTool "runprompt" ''"runprompt @ git+https://github.com/chr15m/runprompt"'';
   posting = uvxTool "posting" "posting";
   vibe = uvxTool "vibe" "--from mistral-vibe vibe";
   vibe-acp = uvxTool "vibe-acp" "--from mistral-vibe vibe-acp";
