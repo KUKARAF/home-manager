@@ -33,6 +33,7 @@ in
 
     # Development tools
     gh          # GitHub CLI
+    google-cloud-sdk
     go
     nodejs
     uv          # Python package manager
@@ -57,7 +58,15 @@ in
     cheat
     wl-clipboard
     claude-code
-    claude-desktop.packages.${system}.claude-desktop-with-fhs
+    (pkgs.symlinkJoin {
+      name = "claude-desktop";
+      paths = [ claude-desktop.packages.${system}.claude-desktop-with-fhs ];
+      buildInputs = [ pkgs.makeWrapper ];
+      postBuild = ''
+        wrapProgram $out/bin/claude-desktop \
+          --add-flags "--disable-gpu --ozone-platform=x11 --no-sandbox"
+      '';
+    })
     gogcli
     bat
     btop
