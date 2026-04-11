@@ -1,6 +1,6 @@
 [gogcli]
 src.github = "steipete/gogcli"
-src.github.version_pattern = "^v(.*)$"
+src.version_pattern = "^v(.*)$"
 fetch.url = "https://github.com/steipete/gogcli/releases/download/v${version}/gogcli_${version}_linux_amd64.tar.gz"
 
 [kv-cli]
