@@ -1,13 +1,18 @@
 { config, pkgs, lib, claude-desktop, system, ... }:
 
 let
-  gogcli = pkgs.stdenv.mkDerivation rec {
-    pname = "gogcli";
-    version = "0.11.0";
-    src = pkgs.fetchurl {
-      url = "https://github.com/steipete/gogcli/releases/download/v${version}/gogcli_${version}_linux_amd64.tar.gz";
-      sha256 = "114w12sfvrwkwg2hnyybrnbipbh0rbykby3vzq9kgkcww9bbm66a";
-    };
+  sources = pkgs.callPackage ./_sources.nix {};
+
+  kv-cli = pkgs.stdenv.mkDerivation {
+    inherit (sources.kv-cli) pname version src;
+    sourceRoot = ".";
+    installPhase = ''
+      install -Dm755 kv $out/bin/kv
+    '';
+  };
+
+  gogcli = pkgs.stdenv.mkDerivation {
+    inherit (sources.gogcli) pname version src;
     sourceRoot = ".";
     installPhase = ''
       install -Dm755 gog $out/bin/gog
@@ -68,6 +73,7 @@ in
       '';
     })
     gogcli
+    kv-cli
     bat
     btop
     delta

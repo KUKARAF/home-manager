@@ -1,0 +1,8 @@
+[gogcli]
+src.github = "steipete/gogcli"
+src.github.version_pattern = "^v(.*)$"
+fetch.url = "https://github.com/steipete/gogcli/releases/download/v${version}/gogcli_${version}_linux_amd64.tar.gz"
+
+[kv-cli]
+src.github = "KUKARAF/kv_cli"
+fetch.url = "https://github.com/KUKARAF/kv_cli/releases/download/${version}/kv-linux-amd64.tar.gz"
