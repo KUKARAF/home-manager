@@ -1,7 +1,7 @@
 { config, pkgs, lib, claude-desktop, system, ... }:
 
 let
-  sources = pkgs.callPackage ./_sources.nix {};
+  sources = pkgs.callPackage ./_sources/generated.nix {};
 
   kv-cli = pkgs.stdenv.mkDerivation {
     inherit (sources.kv-cli) pname version src;

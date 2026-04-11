@@ -20,7 +20,7 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@v8
 
       - name: Run nvfetcher
-        run: nix run .#update -- -c nvfetcher.toml -o _sources.nix
+        run: nix run .#update -- -c nvfetcher.toml
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
