@@ -11,8 +11,16 @@ let
     '';
   };
 
-  gogcli = pkgs.stdenv.mkDerivation {
-    inherit (sources.gogcli) pname version src;
+  # gogcli uses a v-prefixed tag (v0.12.0) but v-less filename (gogcli_0.12.0_linux_amd64.tar.gz).
+  # nvfetcher 0.8.0 cannot strip the v prefix in any TOML-valid way; kept hardcoded.
+  # To update: bump version + run `nix-prefetch-url <url>` then `nix hash convert --to sri`.
+  gogcli = pkgs.stdenv.mkDerivation rec {
+    pname = "gogcli";
+    version = "0.12.0";
+    src = pkgs.fetchurl {
+      url = "https://github.com/steipete/gogcli/releases/download/v${version}/gogcli_${version}_linux_amd64.tar.gz";
+      sha256 = "sha256-oD/MvWfqLlmialbpLeiRhXf0vr5LL5RoI0GXd4J82rI=";
+    };
     sourceRoot = ".";
     installPhase = ''
       install -Dm755 gog $out/bin/gog

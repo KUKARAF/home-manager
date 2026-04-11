@@ -6,15 +6,7 @@
   dockerTools,
 }:
 {
-  gogcli = {
-    pname = "gogcli";
-    version = "0.12.0";
-    src = fetchurl {
-      url = "https://github.com/steipete/gogcli/releases/download/v0.12.0/gogcli_0.12.0_linux_amd64.tar.gz";
-      sha256 = "sha256-oD/MvWfqLlmialbpLeiRhXf0vr5LL5RoI0GXd4J82rI=";
-    };
-  };
-  kv-cli = {
+kv-cli = {
     pname = "kv-cli";
     version = "0.1.7734e33";
     src = fetchurl {
