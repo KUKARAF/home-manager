@@ -11,8 +11,15 @@ let
     '';
   };
 
-  gogcli = pkgs.stdenv.mkDerivation {
-    inherit (sources.gogcli) pname version src;
+  # gogcli has ${version} in its release filename which nvfetcher/Shake can't handle;
+  # kept hardcoded until nvfetcher supports a custom store name for fetch.url.
+  gogcli = pkgs.stdenv.mkDerivation rec {
+    pname = "gogcli";
+    version = "0.12.0";
+    src = pkgs.fetchurl {
+      url = "https://github.com/steipete/gogcli/releases/download/v${version}/gogcli_${version}_linux_amd64.tar.gz";
+      sha256 = "sha256-oD/MvWfqLlmialbpLeiRhXf0vr5LL5RoI0GXd4J82rI=";
+    };
     sourceRoot = ".";
     installPhase = ''
       install -Dm755 gog $out/bin/gog
