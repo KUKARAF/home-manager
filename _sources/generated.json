@@ -1,0 +1,17 @@
+{
+    "kv-cli": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "kv-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-bTMdOy/8lEXb7m94vih26bs0LF++svrR8hK2oQWxZKs=",
+            "type": "url",
+            "url": "https://github.com/KUKARAF/kv_cli/releases/download/0.1.7734e33/kv-linux-amd64.tar.gz"
+        },
+        "version": "0.1.7734e33"
+    }
+}
