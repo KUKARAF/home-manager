@@ -22,4 +22,12 @@
       sha256 = "sha256-nvU7PawTFzDniTT2UdEcC8lYlxaQftuGy0TqYZU+ZXM=";
     };
   };
+  sheets = {
+    pname = "sheets";
+    version = "v0.2.0";
+    src = fetchurl {
+      url = "https://github.com/maaslalani/sheets/releases/download/v0.2.0/sheets_Linux_x86_64.tar.gz";
+      sha256 = "sha256-WGjRYqLfR3HNNhIq6OYIynr8o9OHdLLRfpcn24FunGk=";
+    };
+  };
 }

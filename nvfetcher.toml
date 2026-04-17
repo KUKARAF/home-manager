@@ -5,3 +5,7 @@ fetch.url = "https://github.com/KUKARAF/kv_cli/releases/download/$ver/kv-linux-a
 [debrid-collector]
 src.github = "KUKARAF/debrid_collector"
 fetch.url = "https://github.com/KUKARAF/debrid_collector/releases/download/$ver/debrid-collector-linux-amd64.tar.gz"
+
+[sheets]
+src.github = "maaslalani/sheets"
+fetch.url = "https://github.com/maaslalani/sheets/releases/download/$ver/sheets_Linux_x86_64.tar.gz"
