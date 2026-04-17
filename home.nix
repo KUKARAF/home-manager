@@ -11,6 +11,14 @@ let
     '';
   };
 
+  debrid-collector = pkgs.stdenv.mkDerivation {
+    inherit (sources.debrid-collector) pname version src;
+    sourceRoot = ".";
+    installPhase = ''
+      install -Dm755 debrid-collector $out/bin/debrid-collector
+    '';
+  };
+
   # gogcli uses a v-prefixed tag (v0.12.0) but v-less filename (gogcli_0.12.0_linux_amd64.tar.gz).
   # nvfetcher 0.8.0 cannot strip the v prefix in any TOML-valid way; kept hardcoded.
   # To update: bump version + run `nix-prefetch-url <url>` then `nix hash convert --to sri`.
@@ -46,6 +54,8 @@ in
 
     # Development tools
     gh          # GitHub CLI
+    jujutsu     # jj version control
+    logcli      # Loki log query CLI
     google-cloud-sdk
     go
     nodejs
@@ -82,6 +92,7 @@ in
     })
     gogcli
     kv-cli
+    debrid-collector
     bat
     btop
     delta
