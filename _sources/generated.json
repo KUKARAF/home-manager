@@ -29,6 +29,21 @@
         },
         "version": "0.1.f0d2487"
     },
+    "lazyjira": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "lazyjira",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-oGaNYTHicTUZYiaM6tK3hH33tj2RxixuTWkl1RfF0uQ=",
+            "type": "url",
+            "url": "https://github.com/textfuel/lazyjira/releases/download/v2.9.0/lazyjira_linux_amd64.tar.gz"
+        },
+        "version": "v2.9.0"
+    },
     "sheets": {
         "cargoLock": null,
         "date": null,

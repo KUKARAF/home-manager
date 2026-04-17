@@ -22,6 +22,14 @@
       sha256 = "sha256-nvU7PawTFzDniTT2UdEcC8lYlxaQftuGy0TqYZU+ZXM=";
     };
   };
+  lazyjira = {
+    pname = "lazyjira";
+    version = "v2.9.0";
+    src = fetchurl {
+      url = "https://github.com/textfuel/lazyjira/releases/download/v2.9.0/lazyjira_linux_amd64.tar.gz";
+      sha256 = "sha256-oGaNYTHicTUZYiaM6tK3hH33tj2RxixuTWkl1RfF0uQ=";
+    };
+  };
   sheets = {
     pname = "sheets";
     version = "v0.2.0";

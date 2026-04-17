@@ -9,3 +9,7 @@ fetch.url = "https://github.com/KUKARAF/debrid_collector/releases/download/$ver/
 [sheets]
 src.github = "maaslalani/sheets"
 fetch.url = "https://github.com/maaslalani/sheets/releases/download/$ver/sheets_Linux_x86_64.tar.gz"
+
+[lazyjira]
+src.github = "textfuel/lazyjira"
+fetch.url = "https://github.com/textfuel/lazyjira/releases/download/$ver/lazyjira_linux_amd64.tar.gz"
