@@ -55,7 +55,7 @@ in
     # Development tools
     gh          # GitHub CLI
     jujutsu     # jj version control
-    logcli      # Loki log query CLI
+    grafana-loki  # includes logcli for querying remote Loki instances
     google-cloud-sdk
     go
     nodejs
