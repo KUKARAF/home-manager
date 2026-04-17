@@ -6,12 +6,20 @@
   dockerTools,
 }:
 {
-kv-cli = {
-    pname = "kv-cli";
-    version = "0.1.7734e33";
+  debrid-collector = {
+    pname = "debrid-collector";
+    version = "0.1.c1567ba";
     src = fetchurl {
-      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.7734e33/kv-linux-amd64.tar.gz";
-      sha256 = "sha256-bTMdOy/8lEXb7m94vih26bs0LF++svrR8hK2oQWxZKs=";
+      url = "https://github.com/KUKARAF/debrid_collector/releases/download/0.1.c1567ba/debrid-collector-linux-amd64.tar.gz";
+      sha256 = "sha256-BmPXurEmMA/w2jHRTKGGvfOcrtINdmgM48Do7BwfPDY=";
+    };
+  };
+  kv-cli = {
+    pname = "kv-cli";
+    version = "0.1.f0d2487";
+    src = fetchurl {
+      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.f0d2487/kv-linux-amd64.tar.gz";
+      sha256 = "sha256-nvU7PawTFzDniTT2UdEcC8lYlxaQftuGy0TqYZU+ZXM=";
     };
   };
 }
