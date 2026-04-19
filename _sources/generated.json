@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-wpETcqRQ8J9gquAc2qwaDRbsy1/4qoe4NTCwHUCAtmk=",
+            "sha256": "sha256-igTENFmo3hhE9tZ7gqywFtGr82+IMwPPjNnkH0+6bRw=",
             "type": "url",
-            "url": "https://github.com/KUKARAF/debrid_collector/releases/download/0.1.4069c31/debrid-collector-linux-amd64.tar.gz"
+            "url": "https://github.com/KUKARAF/debrid_collector/releases/download/0.1.73753ed/debrid-collector-linux-amd64.tar.gz"
         },
-        "version": "0.1.4069c31"
+        "version": "0.1.73753ed"
     },
     "kv-cli": {
         "cargoLock": null,
