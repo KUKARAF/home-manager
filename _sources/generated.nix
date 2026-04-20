@@ -8,10 +8,10 @@
 {
   debrid-collector = {
     pname = "debrid-collector";
-    version = "0.1.b2d7ccc";
+    version = "0.1.6d2eb41";
     src = fetchurl {
-      url = "https://github.com/KUKARAF/debrid_collector/releases/download/0.1.b2d7ccc/debrid-collector-linux-amd64.tar.gz";
-      sha256 = "sha256-QxDXid+izVMthgb7+4wOlH8LdVT5Yuj/IM7+DRJUvdk=";
+      url = "https://github.com/KUKARAF/debrid_collector/releases/download/0.1.6d2eb41/debrid-collector-linux-amd64.tar.gz";
+      sha256 = "sha256-K4jbD7iqj62UnH4666mQl2Hm7+98bqaCo+E3niLdec4=";
     };
   };
   kv-cli = {
