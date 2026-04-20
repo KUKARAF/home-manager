@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-t5DGHNjPJ+NMfXutAIpNxIH5IhwrCzgZGPLag3eZnbg=",
+            "sha256": "sha256-I+nx5swGQOV+vgixpEpBLYl3MBxXayb5GqqI4RPAaKE=",
             "type": "url",
-            "url": "https://github.com/KUKARAF/debrid_collector/releases/download/0.1.ff82641/debrid-collector-linux-amd64.tar.gz"
+            "url": "https://github.com/KUKARAF/debrid_collector/releases/download/0.1.8169961/debrid-collector-linux-amd64.tar.gz"
         },
-        "version": "0.1.ff82641"
+        "version": "0.1.8169961"
     },
     "kv-cli": {
         "cargoLock": null,
@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-olWQ4/ip3ZdCRsUBQFE6ykLaqZNTT09kwDs4PezvhFQ=",
+            "sha256": "sha256-pQWsBXP0JEas2LOdyTQhNfJPKwt6oQjpQz/3IYSkONQ=",
             "type": "url",
-            "url": "https://github.com/KUKARAF/kv_cli/releases/download/0.1.b5f164a/kv-linux-amd64.tar.gz"
+            "url": "https://github.com/KUKARAF/kv_cli/releases/download/0.1.6816d8a/kv-linux-amd64.tar.gz"
         },
-        "version": "0.1.b5f164a"
+        "version": "0.1.6816d8a"
     },
     "lazyjira": {
         "cargoLock": null,

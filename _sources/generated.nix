@@ -8,18 +8,18 @@
 {
   debrid-collector = {
     pname = "debrid-collector";
-    version = "0.1.ff82641";
+    version = "0.1.8169961";
     src = fetchurl {
-      url = "https://github.com/KUKARAF/debrid_collector/releases/download/0.1.ff82641/debrid-collector-linux-amd64.tar.gz";
-      sha256 = "sha256-t5DGHNjPJ+NMfXutAIpNxIH5IhwrCzgZGPLag3eZnbg=";
+      url = "https://github.com/KUKARAF/debrid_collector/releases/download/0.1.8169961/debrid-collector-linux-amd64.tar.gz";
+      sha256 = "sha256-I+nx5swGQOV+vgixpEpBLYl3MBxXayb5GqqI4RPAaKE=";
     };
   };
   kv-cli = {
     pname = "kv-cli";
-    version = "0.1.b5f164a";
+    version = "0.1.6816d8a";
     src = fetchurl {
-      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.b5f164a/kv-linux-amd64.tar.gz";
-      sha256 = "sha256-olWQ4/ip3ZdCRsUBQFE6ykLaqZNTT09kwDs4PezvhFQ=";
+      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.6816d8a/kv-linux-amd64.tar.gz";
+      sha256 = "sha256-pQWsBXP0JEas2LOdyTQhNfJPKwt6oQjpQz/3IYSkONQ=";
     };
   };
   lazyjira = {
