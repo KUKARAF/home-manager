@@ -8,10 +8,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    claude-desktop = {
-      url = "github:k3d3/claude-desktop-linux-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nvfetcher = {
       url = "github:berberman/nvfetcher";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,7 +15,7 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, claude-desktop, nvfetcher, ... }:
+    { nixpkgs, home-manager, nvfetcher, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -30,7 +26,7 @@
 
         modules = [ ./home.nix ];
 
-        extraSpecialArgs = { inherit claude-desktop system; };
+        extraSpecialArgs = { inherit system; };
       };
 
       apps.${system}.update = {

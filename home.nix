@@ -1,4 +1,4 @@
-{ config, pkgs, lib, claude-desktop, system, ... }:
+{ config, pkgs, lib, system, ... }:
 
 let
   sources = pkgs.callPackage ./_sources/generated.nix {};
@@ -53,7 +53,7 @@ let
 in
 {
   home.username = "rafa";
-  home.homeDirectory = "/var/home/rafa";
+  home.homeDirectory = "/home/rafa";
 
   home.stateVersion = "25.11";
 
@@ -97,15 +97,6 @@ in
     cheat
     wl-clipboard
     claude-code
-    (pkgs.symlinkJoin {
-      name = "claude-desktop";
-      paths = [ claude-desktop.packages.${system}.claude-desktop-with-fhs ];
-      buildInputs = [ pkgs.makeWrapper ];
-      postBuild = ''
-        wrapProgram $out/bin/claude-desktop \
-          --add-flags "--disable-gpu --ozone-platform=x11 --no-sandbox"
-      '';
-    })
     gogcli
     kv-cli
     debrid-collector
@@ -294,6 +285,10 @@ in
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.bash.shellAliases = {
+    hms = "home-manager switch --flake /home/rafa/.config/home-manager#rafa";
+  };
 
   programs.fzf = {
     enable = true;
