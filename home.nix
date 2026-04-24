@@ -75,6 +75,7 @@ in
     google-cloud-sdk
     go
     nodejs
+    bun
     uv          # Python package manager
     opencode    # AI coding agent
 
