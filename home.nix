@@ -141,6 +141,7 @@ in
       fzf-vim
       vimwiki
       ack-vim
+      jedi-vim
       (pkgs.vimUtils.buildVimPlugin {
         pname = "yazi-vim";
         version = "unstable";
@@ -162,6 +163,7 @@ in
         };
       })
     ];
+    extraPython3Packages = ps: [ ps.jedi ];
     settings = {
       number = true;
     };
