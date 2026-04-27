@@ -24,10 +24,10 @@
   };
   lazyjira = {
     pname = "lazyjira";
-    version = "v2.10.1";
+    version = "v2.10.2";
     src = fetchurl {
-      url = "https://github.com/textfuel/lazyjira/releases/download/v2.10.1/lazyjira_linux_amd64.tar.gz";
-      sha256 = "sha256-2ouVPnmZ1koZ0mnQSyHpfO5jR9IspKjBZYkn28F9lII=";
+      url = "https://github.com/textfuel/lazyjira/releases/download/v2.10.2/lazyjira_linux_amd64.tar.gz";
+      sha256 = "sha256-FeOU8zTwnaAg2Ij9cdslkSsM1z/wk3IyT1xNmckFl8w=";
     };
   };
   sheets = {
