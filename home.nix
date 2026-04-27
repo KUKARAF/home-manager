@@ -113,6 +113,9 @@ in
     clang
     gnumake
     pkg-config
+
+    # Python tools for vim plugins
+    python3Packages.jedi
   ];
 
   # Persistent Python CLI tools via `uv tool install`
@@ -163,7 +166,6 @@ in
         };
       })
     ];
-    extraPython3Packages = ps: [ ps.jedi ];
     settings = {
       number = true;
     };
