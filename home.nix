@@ -123,7 +123,7 @@ in
   home.activation.uvTools = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     export PATH="${pkgs.uv}/bin:${pkgs.git}/bin:$PATH"
     run uv tool install aider-chat
-    run uv tool install --with requests --with icalendar --with python-dateutil "runprompt @ git+https://github.com/chr15m/runprompt"
+    run uv tool install --with requests --with icalendar --with python-dateutil "runprompt @ git+https://github.com/KUKARAF/runprompt"
     run uv tool install posting
     run uv tool install mistral-vibe
     run uv tool install "today[cli] @ git+https://github.com/KUKARAF/diary.git"
