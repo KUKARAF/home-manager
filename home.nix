@@ -37,7 +37,6 @@ let
 
   pastel = pkgs.stdenv.mkDerivation {
     inherit (sources.pastel) pname version src;
-    sourceRoot = ".";
     installPhase = ''
       install -Dm755 pastel $out/bin/pastel
     '';

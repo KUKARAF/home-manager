@@ -38,4 +38,12 @@
       sha256 = "sha256-WGjRYqLfR3HNNhIq6OYIynr8o9OHdLLRfpcn24FunGk=";
     };
   };
+  pastel = {
+    pname = "pastel";
+    version = "v0.12.0";
+    src = fetchurl {
+      url = "https://github.com/sharkdp/pastel/releases/download/v0.12.0/pastel-v0.12.0-x86_64-unknown-linux-gnu.tar.gz";
+      sha256 = "sha256-csodtJaWcBpT/Yot/0yLFnwxwaxPpay9G6j8Bi0bHj4=";
+    };
+  };
 }
