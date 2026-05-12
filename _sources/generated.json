@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-pQWsBXP0JEas2LOdyTQhNfJPKwt6oQjpQz/3IYSkONQ=",
+            "sha256": "sha256-AwgNKvnBN6gvpGh7EbTSfRWMIBBg6qJIeW0FrRZooZ8=",
             "type": "url",
-            "url": "https://github.com/KUKARAF/kv_cli/releases/download/0.1.6816d8a/kv-linux-amd64.tar.gz"
+            "url": "https://github.com/KUKARAF/kv_cli/releases/download/0.1.23b7b81/kv-linux-amd64.tar.gz"
         },
-        "version": "0.1.6816d8a"
+        "version": "0.1.23b7b81"
     },
     "lazyjira": {
         "cargoLock": null,
@@ -43,6 +43,21 @@
             "url": "https://github.com/textfuel/lazyjira/releases/download/v2.13.0/lazyjira_linux_amd64.tar.gz"
         },
         "version": "v2.13.0"
+    },
+    "pastel": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "pastel",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-csodtJaWcBpT/Yot/0yLFnwxwaxPpay9G6j8Bi0bHj4=",
+            "type": "url",
+            "url": "https://github.com/sharkdp/pastel/releases/download/v0.12.0/pastel-v0.12.0-x86_64-unknown-linux-gnu.tar.gz"
+        },
+        "version": "v0.12.0"
     },
     "sheets": {
         "cargoLock": null,

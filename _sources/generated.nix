@@ -16,10 +16,10 @@
   };
   kv-cli = {
     pname = "kv-cli";
-    version = "0.1.6816d8a";
+    version = "0.1.23b7b81";
     src = fetchurl {
-      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.6816d8a/kv-linux-amd64.tar.gz";
-      sha256 = "sha256-pQWsBXP0JEas2LOdyTQhNfJPKwt6oQjpQz/3IYSkONQ=";
+      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.23b7b81/kv-linux-amd64.tar.gz";
+      sha256 = "sha256-AwgNKvnBN6gvpGh7EbTSfRWMIBBg6qJIeW0FrRZooZ8=";
     };
   };
   lazyjira = {
@@ -30,20 +30,20 @@
       sha256 = "sha256-NSlxris4FvDRYGzf0+eOsFtX1Dz0HFA64Ni/3UjGNXc=";
     };
   };
-  sheets = {
-    pname = "sheets";
-    version = "v0.2.0";
-    src = fetchurl {
-      url = "https://github.com/maaslalani/sheets/releases/download/v0.2.0/sheets_Linux_x86_64.tar.gz";
-      sha256 = "sha256-WGjRYqLfR3HNNhIq6OYIynr8o9OHdLLRfpcn24FunGk=";
-    };
-  };
   pastel = {
     pname = "pastel";
     version = "v0.12.0";
     src = fetchurl {
       url = "https://github.com/sharkdp/pastel/releases/download/v0.12.0/pastel-v0.12.0-x86_64-unknown-linux-gnu.tar.gz";
       sha256 = "sha256-csodtJaWcBpT/Yot/0yLFnwxwaxPpay9G6j8Bi0bHj4=";
+    };
+  };
+  sheets = {
+    pname = "sheets";
+    version = "v0.2.0";
+    src = fetchurl {
+      url = "https://github.com/maaslalani/sheets/releases/download/v0.2.0/sheets_Linux_x86_64.tar.gz";
+      sha256 = "sha256-WGjRYqLfR3HNNhIq6OYIynr8o9OHdLLRfpcn24FunGk=";
     };
   };
 }
