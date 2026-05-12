@@ -13,3 +13,7 @@ fetch.url = "https://github.com/maaslalani/sheets/releases/download/$ver/sheets_
 [lazyjira]
 src.github = "textfuel/lazyjira"
 fetch.url = "https://github.com/textfuel/lazyjira/releases/download/$ver/lazyjira_linux_amd64.tar.gz"
+
+[pastel]
+src.github = "sharkdp/pastel"
+fetch.url = "https://github.com/sharkdp/pastel/releases/download/$ver/pastel-$ver-x86_64-unknown-linux-gnu.tar.gz"
