@@ -77,6 +77,7 @@ in
 
     # Development tools
     gh          # GitHub CLI
+    hut         # Sourcehut / sr.ht CLI
     jujutsu     # jj version control
     grafana-loki  # includes logcli for querying remote Loki instances
     google-cloud-sdk
@@ -121,6 +122,8 @@ in
     clang
     gnumake
     pkg-config
+    openssl
+    protobuf
 
     # Python tools for vim plugins
     python3Packages.jedi
@@ -137,6 +140,7 @@ in
     run uv tool install "today[cli] @ git+https://github.com/KUKARAF/diary.git"
     run uv tool install "todo @ git+https://github.com/KUKARAF/todo.git"
     run uv tool install "pomodoro @ git+https://github.com/KUKARAF/pomodoro.git"
+    run uv tool install --with hermes-agent[web] "hermes-agent @ git+https://github.com/KUKARAF/hermes-agent.git"
   '';
 
   # Ensure ~/.local/bin is on PATH for uv tool binaries
