@@ -16,18 +16,18 @@
   };
   kv-cli = {
     pname = "kv-cli";
-    version = "0.1.23b7b81";
+    version = "0.1.68eeb95";
     src = fetchurl {
-      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.23b7b81/kv-linux-amd64.tar.gz";
-      sha256 = "sha256-AwgNKvnBN6gvpGh7EbTSfRWMIBBg6qJIeW0FrRZooZ8=";
+      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.68eeb95/kv-linux-amd64.tar.gz";
+      sha256 = "sha256-uYBAyWEgvFGxOPcvr6+s8h25CXhGnkatCBi2aslnbAM=";
     };
   };
   lazyjira = {
     pname = "lazyjira";
-    version = "v2.15.0";
+    version = "v2.16.1";
     src = fetchurl {
-      url = "https://github.com/textfuel/lazyjira/releases/download/v2.15.0/lazyjira_linux_amd64.tar.gz";
-      sha256 = "sha256-S/aTsQHkptfOIY5/CAeGKz3DSEm9n57TrEuKgsEbPBw=";
+      url = "https://github.com/textfuel/lazyjira/releases/download/v2.16.1/lazyjira_linux_amd64.tar.gz";
+      sha256 = "sha256-8i6Esi5z1NWguAJW9C1LLqdfwsijO2iqyC158M3sK6w=";
     };
   };
   pastel = {
