@@ -42,6 +42,19 @@ let
     '';
   };
 
+  officecli = pkgs.stdenv.mkDerivation rec {
+    pname = "officecli";
+    version = "1.0.113";
+    src = pkgs.fetchurl {
+      url = "https://github.com/iOfficeAI/OfficeCLI/releases/download/v${version}/officecli-linux-x64";
+      sha256 = "sha256-/+CfX47HYkDkT/QxuAK4pEZnda/aMo8fe2BuOnmAcxE=";
+    };
+    dontUnpack = true;
+    installPhase = ''
+      install -Dm755 $src $out/bin/officecli
+    '';
+  };
+
   # gogcli uses a v-prefixed tag (v0.12.0) but v-less filename (gogcli_0.12.0_linux_amd64.tar.gz).
   # nvfetcher 0.8.0 cannot strip the v prefix in any TOML-valid way; kept hardcoded.
   # To update: bump version + run `nix-prefetch-url <url>` then `nix hash convert --to sri`.
@@ -106,6 +119,8 @@ in
     cheat
     wl-clipboard
     claude-code
+    snyk
+    officecli
     gogcli
     kv-cli
     debrid-collector
