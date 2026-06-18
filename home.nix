@@ -156,6 +156,7 @@ in
     run uv tool install "todo @ git+https://github.com/KUKARAF/todo.git"
     run uv tool install "pomodoro @ git+https://github.com/KUKARAF/pomodoro.git"
     run uv tool install --with hermes-agent[web] "hermes-agent @ git+https://github.com/KUKARAF/hermes-agent.git"
+    run uv tool install browser-use
   '';
 
   # Ensure ~/.local/bin is on PATH for uv tool binaries
