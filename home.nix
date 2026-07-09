@@ -111,7 +111,7 @@ in
     # Search and navigation
     ripgrep
     fd
-    silver-searcher  # ag
+    silver-searcher-ng  # ag
 
     # General utilities
     jq
@@ -328,7 +328,7 @@ in
     enableBashIntegration = true;
     defaultCommand = "fd --type f --hidden --follow --exclude .git";
     defaultOptions = [ "--height 40%" "--layout=reverse" "--border" ];
-    fileWidgetCommand = "fd --type f --hidden --follow --exclude .git";
-    changeDirWidgetCommand = "fd --type d --hidden --follow --exclude .git";
+    fileWidget.command = "fd --type f --hidden --follow --exclude .git";
+    changeDirWidget.command = "fd --type d --hidden --follow --exclude .git";
   };
 }
