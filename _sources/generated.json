@@ -38,11 +38,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-3+tvHJj9YXuC9ikwqRH+DZT3VPPDh7tvTuDXpPzOvcc=",
+            "sha256": "sha256-UDtOJvRpeW2hH62++Xmgsu3g17rWPDvDTtbeeza3IUw=",
             "type": "url",
-            "url": "https://github.com/textfuel/lazyjira/releases/download/v2.19.1/lazyjira_linux_amd64.tar.gz"
+            "url": "https://github.com/textfuel/lazyjira/releases/download/v2.19.2/lazyjira_linux_amd64.tar.gz"
         },
-        "version": "v2.19.1"
+        "version": "v2.19.2"
     },
     "pastel": {
         "cargoLock": null,
