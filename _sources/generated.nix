@@ -40,10 +40,10 @@
   };
   sheets = {
     pname = "sheets";
-    version = "v0.2.0";
+    version = "v0.3.0";
     src = fetchurl {
-      url = "https://github.com/maaslalani/sheets/releases/download/v0.2.0/sheets_Linux_x86_64.tar.gz";
-      sha256 = "sha256-WGjRYqLfR3HNNhIq6OYIynr8o9OHdLLRfpcn24FunGk=";
+      url = "https://github.com/maaslalani/sheets/releases/download/v0.3.0/sheets_Linux_x86_64.tar.gz";
+      sha256 = "sha256-JDablY3nmYmDLaScwlvwD6+w9b8BGXYeo9u7+ip17a8=";
     };
   };
 }
