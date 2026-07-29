@@ -1,4 +1,19 @@
 {
+    "collie-server": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "collie-server",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-SLhJ+83iU7DGei1RoFCZGUJl/FnGDgrONr1SdJ6JhIY=",
+            "type": "url",
+            "url": "https://github.com/KUKARAF/collie-server/releases/download/0.1.46dee7c/collie-server-linux-amd64.tar.gz"
+        },
+        "version": "0.1.46dee7c"
+    },
     "debrid-collector": {
         "cargoLock": null,
         "date": null,

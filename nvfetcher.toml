@@ -2,6 +2,10 @@
 src.github = "KUKARAF/kv_cli"
 fetch.url = "https://github.com/KUKARAF/kv_cli/releases/download/$ver/kv-linux-amd64.tar.gz"
 
+[collie-server]
+src.github = "KUKARAF/collie-server"
+fetch.url = "https://github.com/KUKARAF/collie-server/releases/download/$ver/collie-server-linux-amd64.tar.gz"
+
 [debrid-collector]
 src.github = "KUKARAF/debrid_collector"
 fetch.url = "https://github.com/KUKARAF/debrid_collector/releases/download/$ver/debrid-collector-linux-amd64.tar.gz"

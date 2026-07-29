@@ -6,6 +6,14 @@
   dockerTools,
 }:
 {
+  collie-server = {
+    pname = "collie-server";
+    version = "0.1.46dee7c";
+    src = fetchurl {
+      url = "https://github.com/KUKARAF/collie-server/releases/download/0.1.46dee7c/collie-server-linux-amd64.tar.gz";
+      sha256 = "sha256-SLhJ+83iU7DGei1RoFCZGUJl/FnGDgrONr1SdJ6JhIY=";
+    };
+  };
   debrid-collector = {
     pname = "debrid-collector";
     version = "0.1.8ebe9f7";

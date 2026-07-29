@@ -19,6 +19,14 @@ let
     '';
   };
 
+  collie-server = pkgs.stdenv.mkDerivation {
+    inherit (sources.collie-server) pname version src;
+    sourceRoot = ".";
+    installPhase = ''
+      install -Dm755 collie-server $out/bin/collie-server
+    '';
+  };
+
   sheets = pkgs.stdenv.mkDerivation {
     inherit (sources.sheets) pname version src;
     sourceRoot = ".";
@@ -124,6 +132,7 @@ in
     gogcli
     kv-cli
     debrid-collector
+    collie-server
     sheets
     lazyjira
     pastel
