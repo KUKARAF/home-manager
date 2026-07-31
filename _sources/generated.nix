@@ -8,10 +8,10 @@
 {
   collie-server = {
     pname = "collie-server";
-    version = "0.1.46dee7c";
+    version = "0.1.a2b7d14";
     src = fetchurl {
-      url = "https://github.com/KUKARAF/collie-server/releases/download/0.1.46dee7c/collie-server-linux-amd64.tar.gz";
-      sha256 = "sha256-SLhJ+83iU7DGei1RoFCZGUJl/FnGDgrONr1SdJ6JhIY=";
+      url = "https://github.com/KUKARAF/collie-server/releases/download/0.1.a2b7d14/collie-server-linux-amd64.tar.gz";
+      sha256 = "sha256-yXXCGnK3AiOplgjYdBfrE3DyM75PY6iX9fn3xorxwM4=";
     };
   };
   debrid-collector = {
@@ -24,10 +24,10 @@
   };
   kv-cli = {
     pname = "kv-cli";
-    version = "0.1.2940a47";
+    version = "0.1.80c50ab";
     src = fetchurl {
-      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.2940a47/kv-linux-amd64.tar.gz";
-      sha256 = "sha256-gkE0FUm8hqJ9c0JLR3O7u2SBSp6mOtWiso/ndbHTZcc=";
+      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.80c50ab/kv-linux-amd64.tar.gz";
+      sha256 = "sha256-BpTb6wXNCbP53LbCH9vboTO/L46b2wk0NJH3PRe1/0I=";
     };
   };
   lazyjira = {
