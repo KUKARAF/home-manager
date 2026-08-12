@@ -38,11 +38,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-uEs1uDHiiyWQBTCwquhLYvfpLWWe9k0/rgbM7Fvzmrk=",
+            "sha256": "sha256-el6MErLc41dIoYmtMRWkRMLuxczPgzmyfWc4POIGG+Y=",
             "type": "url",
-            "url": "https://github.com/KUKARAF/kv_cli/releases/download/0.1.65811a4/kv-linux-amd64.tar.gz"
+            "url": "https://github.com/KUKARAF/kv_cli/releases/download/0.1.3352185/kv-linux-amd64.tar.gz"
         },
-        "version": "0.1.65811a4"
+        "version": "0.1.3352185"
     },
     "lazyjira": {
         "cargoLock": null,
