@@ -332,6 +332,13 @@ in
     hms = "home-manager switch --flake /home/rafa/.config/home-manager#rafa";
   };
 
+  # Ghostty terminal (installs pkgs.ghostty, writes ~/.config/ghostty/config)
+  programs.ghostty = {
+    enable = true;
+    enableBashIntegration = true;
+    installVimSyntax = true;
+  };
+
   programs.fzf = {
     enable = true;
     enableBashIntegration = true;
