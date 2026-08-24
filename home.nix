@@ -140,6 +140,7 @@ in
     btop
     delta
     eza
+    czkawka     # duplicate/junk file finder (provides czkawka_cli)
 
     # Build tools
     cmake
