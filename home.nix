@@ -93,7 +93,10 @@ in
     zoxide
 
     # Terminal multiplexer and file manager
-    zellij
+    # zellij: installed by the devpod image from GitHub releases into /usr/bin.
+    # It is a static musl binary, so the host copy also runs inside the toolbox
+    # via /run/host/usr/bin -- nix cannot serve the host at all, since /nix
+    # only exists inside the container.
     yazi
 
     # Development tools
