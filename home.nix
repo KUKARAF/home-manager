@@ -333,9 +333,13 @@ in
     hms = "home-manager switch --flake /home/rafa/.config/home-manager#rafa";
   };
 
-  # Ghostty terminal (installs pkgs.ghostty, writes ~/.config/ghostty/config)
+  # Ghostty terminal: config only. The binary comes from the Silverblue image
+  # (devpod recipe), because a nix-built ghostty inside a toolbox cannot get an
+  # EGL display -- nixpkgs libglvnd looks for the NixOS-only
+  # /run/opengl-driver and falls back to the container's broken Mesa.
   programs.ghostty = {
     enable = true;
+    package = null;
     enableBashIntegration = true;
     installVimSyntax = true;
   };
