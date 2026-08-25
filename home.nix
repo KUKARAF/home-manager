@@ -341,7 +341,11 @@ in
     enable = true;
     package = null;
     enableBashIntegration = true;
-    installVimSyntax = true;
+    # Both of these need the nix package: vim syntax is pulled from
+    # cfg.package.vim, and systemd.enable defaults to true on Linux. The image's
+    # ghostty-vim subpackage already provides the vim syntax.
+    installVimSyntax = false;
+    systemd.enable = false;
   };
 
   programs.fzf = {
