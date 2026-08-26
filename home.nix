@@ -164,7 +164,6 @@ in
     run uv tool install aider-chat
     run uv tool install --with requests --with icalendar --with python-dateutil "runprompt @ git+https://github.com/KUKARAF/runprompt"
     run uv tool install posting
-    run uv tool install mistral-vibe
     run uv tool install "today[cli] @ git+https://github.com/KUKARAF/diary.git"
     run uv tool install "todo @ git+https://github.com/KUKARAF/todo.git"
     run uv tool install "pomodoro @ git+https://github.com/KUKARAF/pomodoro.git"
