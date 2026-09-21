@@ -24,10 +24,10 @@
   };
   kv-cli = {
     pname = "kv-cli";
-    version = "0.1.8cc108d";
+    version = "0.1.2954978";
     src = fetchurl {
-      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.8cc108d/kv-linux-amd64.tar.gz";
-      sha256 = "sha256-nQC2xt21erwMYxtE12ISrQzTqH/BpZxMvftM3m3U8lQ=";
+      url = "https://github.com/KUKARAF/kv_cli/releases/download/0.1.2954978/kv-linux-amd64.tar.gz";
+      sha256 = "sha256-XJAapmc1xgiDF3DF+wNn77dQ0+6KykgEgXDMhdbgpGE=";
     };
   };
   lazyjira = {
