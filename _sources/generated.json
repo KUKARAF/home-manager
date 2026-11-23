@@ -59,6 +59,21 @@
         },
         "version": "v2.19.2"
     },
+    "omp": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "omp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-BOlJD5OU2m1oBEdMwuQes9GPjiYhXfSzS91K1MDYpAE=",
+            "type": "url",
+            "url": "https://github.com/can1357/oh-my-pi/releases/download/v19.1.1/omp-linux-x64"
+        },
+        "version": "v19.1.1"
+    },
     "pastel": {
         "cargoLock": null,
         "date": null,

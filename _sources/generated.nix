@@ -38,6 +38,14 @@
       sha256 = "sha256-UDtOJvRpeW2hH62++Xmgsu3g17rWPDvDTtbeeza3IUw=";
     };
   };
+  omp = {
+    pname = "omp";
+    version = "v19.1.1";
+    src = fetchurl {
+      url = "https://github.com/can1357/oh-my-pi/releases/download/v19.1.1/omp-linux-x64";
+      sha256 = "sha256-BOlJD5OU2m1oBEdMwuQes9GPjiYhXfSzS91K1MDYpAE=";
+    };
+  };
   pastel = {
     pname = "pastel";
     version = "v0.12.0";
@@ -52,14 +60,6 @@
     src = fetchurl {
       url = "https://github.com/maaslalani/sheets/releases/download/v0.3.0/sheets_Linux_x86_64.tar.gz";
       sha256 = "sha256-JDablY3nmYmDLaScwlvwD6+w9b8BGXYeo9u7+ip17a8=";
-    };
-  };
-  omp = {
-    pname = "omp";
-    version = "v19.1.1";
-    src = fetchurl {
-      url = "https://github.com/can1357/oh-my-pi/releases/download/v19.1.1/omp-linux-x64";
-      sha256 = "sha256-BOlJD5OU2m1oBEdMwuQes9GPjiYhXfSzS91K1MDYpAE=";
     };
   };
 }
