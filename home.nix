@@ -3,14 +3,6 @@
 let
   sources = pkgs.callPackage ./_sources/generated.nix {};
 
-  kv-cli = pkgs.stdenv.mkDerivation {
-    inherit (sources.kv-cli) pname version src;
-    sourceRoot = ".";
-    installPhase = ''
-      install -Dm755 kv $out/bin/kv
-    '';
-  };
-
   debrid-collector = pkgs.stdenv.mkDerivation {
     inherit (sources.debrid-collector) pname version src;
     sourceRoot = ".";
@@ -80,17 +72,13 @@ let
   };
 in
 {
+  imports = [ ./common.nix ];
+
   home.username = "rafa";
   home.homeDirectory = "/home/rafa";
 
-  home.stateVersion = "25.11";
-
-  nixpkgs.config.allowUnfree = true;
-
   home.packages = with pkgs; [
     # Shell and prompt
-    starship
-    zoxide
 
     # Terminal multiplexer and file manager
     # zellij: installed by the devpod image from GitHub releases into /usr/bin.
@@ -100,15 +88,11 @@ in
     yazi
 
     # Development tools
-    gh          # GitHub CLI
     hut         # Sourcehut / sr.ht CLI
     jujutsu     # jj version control
     grafana-loki  # includes logcli for querying remote Loki instances
     google-cloud-sdk
     go
-    nodejs
-    bun
-    uv          # Python package manager
     opencode    # AI coding agent
 
     # Media and file utilities
@@ -120,29 +104,21 @@ in
     p7zip
 
     # Search and navigation
-    ripgrep
-    fd
     silver-searcher-ng  # ag
 
     # General utilities
-    jq
     gum
     cheat
     wl-clipboard
-    claude-code
     snyk
     officecli
     gogcli
-    kv-cli
     debrid-collector
     collie-server
     sheets
     lazyjira
     pastel
-    bat
     btop
-    delta
-    eza
     czkawka     # duplicate/junk file finder (provides czkawka_cli)
 
     # Build tools
@@ -154,7 +130,6 @@ in
     protobuf
 
     # Python tools for vim plugins
-    python3Packages.jedi
   ];
 
   # Persistent Python CLI tools via `uv tool install`
@@ -171,54 +146,29 @@ in
     run uv tool install browser-use
   '';
 
-  # Ensure ~/.local/bin is on PATH for uv tool binaries
-  home.sessionPath = [ "$HOME/.local/bin" ];
-
-  programs.vim = {
-    enable = true;
-    plugins = with pkgs.vimPlugins; [
-      vim-lastplace
-      vim-fugitive
-      vim-commentary
-      ctrlp-vim
-      fzf-vim
-      vimwiki
-      ack-vim
-      jedi-vim
-      (pkgs.vimUtils.buildVimPlugin {
-        pname = "yazi-vim";
-        version = "unstable";
-        src = pkgs.fetchFromGitHub {
-          owner = "chriszarate";
-          repo = "yazi.vim";
-          rev = "main";
-          sha256 = "sha256-W5/BvJ8MrUgJV+ENMa3uU5Rbvj1bItR+Er+yMy4EjSc=";
-        };
-      })
-      (pkgs.vimUtils.buildVimPlugin {
-        pname = "diary-vim";
-        version = "unstable";
-        src = pkgs.fetchFromGitHub {
-          owner = "KUKARAF";
-          repo = "diary";
-          rev = "main";
-          sha256 = "sha256-hHojflBf7TgYmm33WUSA+tgO+vMpn5x/MH5OdTeJAWk=";
-        };
-      })
-    ];
-    settings = {
-      number = true;
-    };
-    # Single source of truth: the stowed vimrc from ~/.config/dotfiles.
-    extraConfig = ''
-      if filereadable(expand('~/.vimrc'))
-        source ~/.vimrc
-      endif
-    '';
-  };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  # Extra vim plugins on top of common.nix.
+  programs.vim.plugins = [
+    (pkgs.vimUtils.buildVimPlugin {
+      pname = "yazi-vim";
+      version = "unstable";
+      src = pkgs.fetchFromGitHub {
+        owner = "chriszarate";
+        repo = "yazi.vim";
+        rev = "main";
+        sha256 = "sha256-W5/BvJ8MrUgJV+ENMa3uU5Rbvj1bItR+Er+yMy4EjSc=";
+      };
+    })
+    (pkgs.vimUtils.buildVimPlugin {
+      pname = "diary-vim";
+      version = "unstable";
+      src = pkgs.fetchFromGitHub {
+        owner = "KUKARAF";
+        repo = "diary";
+        rev = "main";
+        sha256 = "sha256-hHojflBf7TgYmm33WUSA+tgO+vMpn5x/MH5OdTeJAWk=";
+      };
+    })
+  ];
 
   programs.bash.shellAliases = {
     hms = "home-manager switch --flake /home/rafa/.config/home-manager#rafa";
@@ -237,14 +187,5 @@ in
     # ghostty-vim subpackage already provides the vim syntax.
     installVimSyntax = false;
     systemd.enable = false;
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableBashIntegration = true;
-    defaultCommand = "fd --type f --hidden --follow --exclude .git";
-    defaultOptions = [ "--height 40%" "--layout=reverse" "--border" ];
-    fileWidget.command = "fd --type f --hidden --follow --exclude .git";
-    changeDirWidget.command = "fd --type d --hidden --follow --exclude .git";
   };
 }
